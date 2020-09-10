@@ -76,6 +76,8 @@
       </div>
     </div>
 
+    {% if combinations_count < 100 %}
+
     <div class="combinations-list">
       <table class="table">
         <thead class="thead-default" id="combinations_thead" {% if not has_combinations %}style="display: none;"{% endif %}>
@@ -121,6 +123,7 @@
         </tbody>
       </table>
     </div>
+    {% endif %}
   </div>
 
   <div id="attributes-list" class="col-md-3">

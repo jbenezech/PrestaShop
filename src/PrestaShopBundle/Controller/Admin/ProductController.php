@@ -686,7 +686,7 @@ class ProductController extends FrameworkBundleAdminController
             $this->getContext()->language->id
         );
 
-        if (is_array($combinations)) {
+        if (is_array($combinations) && sizeof($combinations) < 100) {
             $maxInputVars = (int) ini_get('max_input_vars');
             $combinationsCount = count($combinations) * 25;
             $combinationsInputs = ceil($combinationsCount / 1000) * 1000;
